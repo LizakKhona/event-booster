@@ -1,0 +1,109 @@
+section {
+    background-color: yellowgreen;
+    width: 320px;
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 1280px;
+    }
+}
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4px;
+    row-gap: 30px;
+    justify-content: flex-start;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+        column-gap: 13px;
+        row-gap: 45px;
+    }
+    @media screen and (min-width: 1200px) {
+        column-gap: 56px;
+        row-gap: 50px;
+    }
+}
+.cards-item {
+    padding-top: 9px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    flex-basis: calc((100% - 4px) / 2);
+    @media screen and (min-width: 768px) {
+        padding-top: 13px;
+        flex-basis: calc((100% - 26px) / 3);
+    }
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc((100% - 56px * 3) / 4);
+    }
+}
+.rectangle-bgc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 108px;
+    height: 101px;
+    @media screen and (min-width: 768px) {
+        width: 153px;
+        height: 143px;
+    }
+}
+.thumb {
+    width: 128px;
+    height: 161px;
+    @media screen and (min-width: 768px) {
+        width: 180px;
+        height: 227px;
+    }
+}
+.thumb-img {
+    border-radius: 50px 0;
+    overflow: hidden;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+}
+.box-event {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: $secondary-color;
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+.box-date {
+    text-align: center;
+    color: $primary-color;
+    font-size: 14px;
+    @media screen and (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+.box-place {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3px;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    color: $primary-color;
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+    }
+}
+.icon {
+    width: 7px;
+    height: 10px;
+}
