@@ -54,9 +54,13 @@ body {
   font-size: 16px;
 }
 
+body {
+  background-image: url("../images/bg-body.jpg");
+}
+
 section {
-  background-color: yellowgreen;
   width: 320px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   section {
@@ -69,6 +73,15 @@ section {
   }
 }
 
+.cards-section {
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .cards-section {
+    padding-bottom: 80px;
+  }
+}
+
 .cards-list {
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +89,7 @@ section {
        column-gap: 4px;
   row-gap: 30px;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 @media screen and (min-width: 768px) {
   .cards-list {
@@ -97,10 +110,10 @@ section {
   padding-top: 9px;
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
   justify-content: center;
   align-items: flex-start;
   position: relative;
+  z-index: 2;
   flex-basis: calc((100% - 4px) / 2);
 }
 @media screen and (min-width: 768px) {
@@ -115,18 +128,31 @@ section {
   }
 }
 
-.rectangle-bgc {
+.cards-item::before {
+  content: "";
+  display: block;
+  border: 1px solid rgba(220, 86, 198, 0.3058823529);
+  border-radius: 50px 0;
   position: absolute;
   top: 0;
   right: 0;
   width: 108px;
   height: 101px;
+  z-index: -1;
 }
 @media screen and (min-width: 768px) {
-  .rectangle-bgc {
+  .cards-item::before {
     width: 153px;
     height: 143px;
   }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 5px;
 }
 
 .thumb {
@@ -182,7 +208,7 @@ section {
   -moz-column-gap: 3px;
        column-gap: 3px;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 12px;
@@ -195,7 +221,8 @@ section {
   }
 }
 
-.icon {
+.box-img {
   width: 7px;
   height: 10px;
+  background-color: white;
 }/*# sourceMappingURL=index.css.map */
