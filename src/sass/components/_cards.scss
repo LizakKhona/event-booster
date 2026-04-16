@@ -1,11 +1,7 @@
-section {
-    background-color: yellowgreen;
-    width: 320px;
-    @media screen and (min-width: 768px) {
-        width: 768px;
-    }
+.cards-section {
+    padding-bottom: 60px;
     @media screen and (min-width: 1200px) {
-        width: 1280px;
+        padding-bottom: 80px;
     }
 }
 .cards-list {
@@ -14,7 +10,7 @@ section {
     column-gap: 4px;
     row-gap: 30px;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     @media screen and (min-width: 768px) {
         column-gap: 13px;
         row-gap: 45px;
@@ -28,10 +24,10 @@ section {
     padding-top: 9px;
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
     justify-content: center;
     align-items: flex-start;
     position: relative;
+    z-index: 2;
     flex-basis: calc((100% - 4px) / 2);
     @media screen and (min-width: 768px) {
         padding-top: 13px;
@@ -41,16 +37,39 @@ section {
         flex-basis: calc((100% - 56px * 3) / 4);
     }
 }
-.rectangle-bgc {
+.cards-item::before {
+    content: "";
+    display: block;
+    border: 1px solid #dc56c64e;
+    border-radius: 50px 0;
     position: absolute;
     top: 0;
     right: 0;
     width: 108px;
     height: 101px;
+    z-index: -1;
     @media screen and (min-width: 768px) {
         width: 153px;
         height: 143px;
     }
+}
+// .rectangle-bgc {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     width: 108px;
+//     height: 101px;
+//     @media screen and (min-width: 768px) {
+//         width: 153px;
+//         height: 143px;
+//     }
+// }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
 }
 .thumb {
     width: 128px;
@@ -93,7 +112,7 @@ section {
     flex-direction: row;
     column-gap: 3px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     font-family: $font-family;
     font-weight: 600;
     font-size: 12px;
@@ -103,7 +122,12 @@ section {
         font-size: 14px;
     }
 }
-.icon {
+// .icon {
+//     width: 7px;
+//     height: 10px;
+// }
+.box-img {
     width: 7px;
     height: 10px;
+    background-color: white;
 }

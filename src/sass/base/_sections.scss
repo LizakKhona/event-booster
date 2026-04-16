@@ -1,0 +1,14 @@
+body {
+    background-image: url("../images/bg-body.jpg");
+}
+section {
+    // background-image: url("../images/bg-body.jpg");
+    width: 320px;
+    margin: 0 auto;
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 1280px;
+    }
+}

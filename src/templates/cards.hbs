@@ -1,18 +1,21 @@
 {{#each _embedded.events}}
-    <li class="cards-item">
-        <img class="rectangle-bgc" src="./images/cards-rectangle-bgc.png" alt="A rectangle in the background of the card">
-        <div class="thumb">
-            <img class="thumb-img" src="{{images.[4].url}}" alt="{{name}}">
-        </div>
-        <div class="box">
-            <h2 class="box-event">{{name}}</h2>
-            <p class="box-date">{{dates.start.localDate}}</p>
-            <p class="box-place">
-                <svg class="icon">
-                    <use href="../icons/symbol-defs.svg#icon-destination"></use>
-                </svg>
-                    {{_embedded.venues.[0].name}}
-            </p>
+    <li class="cards-item animate__animated animate__fadeIn">
+        {{!-- <img class="rectangle-bgc" src="../images/cards-rectangle-bgc.png" alt=""> --}}
+        <div class="wrapper">
+            <div class="thumb">
+                <img class="thumb-img" src="{{images.[4].url}}" alt="{{name}}">
+            </div>
+            <div class="box">
+                <h2 class="box-event">{{name}}</h2>
+                <p class="box-date">{{dates.start.localDate}}</p>
+                <p class="box-place">
+                    {{!-- <svg class="icon">
+                        <use href="../icons/symbol-defs.svg#icon-destination"></use>
+                    </svg> --}}
+                    <img class="box-img" src="../images/destination.svg" alt="">
+                        {{_embedded.venues.[0].name}}
+                </p>
+            </div>
         </div>
     </li>
 {{/each}}
