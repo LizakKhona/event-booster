@@ -1,0 +1,41 @@
+.pagination {
+    /* по центру */
+    display: flex;
+    justify-content: center;
+
+    /* відступ між кнопками */
+    gap: 5px;
+
+    /* десктоп */
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.pagination button {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+
+    padding: 5px 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    /* анымацыя */
+    transition: 0.3s;
+}
+
+.pagination button.active {
+    color: #dc56c5;
+    border: 1px solid #dc56c5;
+    border-radius: 10px 0;
+
+    width: 30px;
+    height: 30px;
+}
+
+.pagination button.active {
+    transform: scale(1.2);
+}
